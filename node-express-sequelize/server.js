@@ -13,6 +13,7 @@ app.get('/users',function(req,res){
 	User.findAll({
 		username
 	}).then(function(user){
+		res.sendStatus(200)
 		res.json(user)
 	})
 })
